@@ -2,20 +2,19 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<title>Numeric stepper demo</title>
+	<title>Cart demo</title>
 </head>
 <body>
-	<div id="wrapper"></div>
+	<div id="cart"></div>
 
 	<script src="../bower_components/react/react.js"></script>
 	<script src="../src/numeric-stepper-model.js"></script>
+	<script src="../src/cart-model.js"></script>
 	<script src="numeric-stepper.js"></script>
+	<script src="cart.js"></script>
 
 	<script>
-		React.render(React.createElement(NumericStepper, {
-			val: 10,
-			step: 1.5
-		}), document.getElementById('wrapper'));
+		React.render(React.createElement(Cart, {qq: 'qwe'}), document.getElementById('cart'));
 	</script>
 </body>
 </html>
