@@ -6,20 +6,21 @@ var NumericStepper = React.createClass({
 
 	increment: function() {
 		this.model.increment();
-		this.props.onUpdate(this.state.val);
 	},
 
 	decrement: function() {
 		this.model.decrement();
-		this.props.onUpdate(this.state.val);
 	},
 
+	componentDidUpdate: function() {
+		this.props.onUpdate(this.state.val);
+	},
 
 	getDefaultProps: function() {
 		return {
 			val: 0,
 			step: 1,
-			onUpd: function() {}
+			onUpdate: function() {}
 		}
 	},
 
@@ -42,7 +43,6 @@ var NumericStepper = React.createClass({
 			this.setState({val: e.target.value});
 		} else {
 			this.model.setValue(this.uglify(e.target.value));
-			this.props.onUpdate(this.state.val);
 		}
 	},
 

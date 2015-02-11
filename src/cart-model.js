@@ -59,11 +59,16 @@ var CartModel = (function() {
 			}).filter(function(item) {return item});
 		}
 
+		function get() {
+			return storage;
+		}
+
 		this.add = add;
 		this.remove = remove;
 		this.update = update;
 		this.getSubtotalByItem = getSubtotalByItem;
 		this.getSubtotal = getSubtotal;
 		this.getList = getList;
+		this.get = get;
 	}
 })();
