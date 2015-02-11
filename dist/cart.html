@@ -14,7 +14,13 @@
 	<script src="cart.js"></script>
 
 	<script>
-		React.render(React.createElement(Cart, {qq: 'qwe'}), document.getElementById('cart'));
+		var cart = new CartModel();
+
+		cart.add('apple', 2.5, 3);
+		cart.add('orange', 1.3, 2);
+		cart.add('banana', 3, 4);
+
+		React.render(React.createElement(Cart, {cart: cart}), document.getElementById('cart'));
 	</script>
 </body>
 </html>
