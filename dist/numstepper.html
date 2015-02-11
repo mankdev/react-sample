@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Numeric stepper demo</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+
+	<!--<script src="numeric-stepper.js"></script>-->
+	<script src="../bower_components/react/react.js"></script>
+	<script src="../src/numeric-stepper-model.js"></script>
+	<script src="numeric-stepper.js"></script>
+
+	<script>
+		React.render(React.createElement(NumericStepper, {
+			val: 10,
+			step: 1.5
+		}), document.getElementById('wrapper'));
+	</script>
+</body>
+</html>
