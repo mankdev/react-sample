@@ -12,24 +12,6 @@ var NumericStepper = React.createClass({
 		this.model.decrement();
 	},
 
-	componentDidUpdate: function() {
-		this.props.onUpdate(this.state.val);
-	},
-
-	getDefaultProps: function() {
-		return {
-			val: 0,
-			step: 1,
-			onUpdate: function() {}
-		}
-	},
-
-	getInitialState: function() {
-		return {
-			val: 0
-		}
-	},
-
 	isValid: function(value) {
 		var lastSymbol = value[value.length - 1];
 
@@ -52,6 +34,24 @@ var NumericStepper = React.createClass({
 
 	pretify: function(value) {
 		return value.toString().replace('.', ',');
+	},
+
+	componentDidUpdate: function() {
+		this.props.onUpdate(this.state.val);
+	},
+
+	getDefaultProps: function() {
+		return {
+			val: 0,
+			step: 1,
+			onUpdate: function() {}
+		}
+	},
+
+	getInitialState: function() {
+		return {
+			val: 0
+		}
 	},
 
 	componentDidMount: function() {
